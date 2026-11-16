@@ -20,3 +20,10 @@
 *   **Mathematical operation:** Floating-point addition, absolute error, relative error, and evaluating a formula using both an unstable and a stable algebraic arrangement.
 *   **Parameter Change:** If I change the approximation of the square root of 2 to 1.4142 (instead of 1.414), the absolute error decreases because the approximation is closer to the true value.
 *   **Output Interpretation:** The script proves that `0.1 + 0.2 == 0.3` is `False` due to binary representation limits. It also shows that for very small values (like 1e-12), the "direct" formula loses precision (yielding 0.500044...), while the mathematically rearranged "stable" formula gives the correct answer of 0.500000000000.
+
+## Task 5: Matrix Algebra and Matrix Operations
+
+*   **Input values:** A 4x2 matrix representing the corners of a 1x1 square, scaling factors (2 and 3), and a rotation angle (45 degrees).
+*   **Mathematical operation:** Matrix multiplication (combining rotation and scaling matrices), and calculating the determinant of the transformation matrix.
+*   **Parameter Change:** If I change the rotation angle from 45 degrees to 90 degrees, the output "Transformed points" will change to reflect a quarter-turn rotation, moving the corners to different quadrants.
+*   **Output Interpretation:** The script successfully applies a combined scaling and rotation to the square. The "Transformed points" show the new coordinates in 2D space. The determinant represents how much the area of the shape scaled (in this case, 6.0, which is the product of the x and y scaling factors).
