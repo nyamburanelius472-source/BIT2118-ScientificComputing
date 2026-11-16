@@ -13,3 +13,10 @@
 *   **Mathematical operation:** Division by 1000 and squaring (converting to seconds and calculating squared values).
 *   **Parameter Change:** I changed the number of simulated readings. If I reduce the dataset to 10 values, the time difference between the loop and vectorized version becomes negligible because the overhead of starting the loop is small.
 *   **Output Interpretation:** The output shows that the vectorized NumPy approach is approximately 76 times faster (0.5708s for the loop vs 0.0075s for vectorization). This is because NumPy performs the operations in optimized C code without the overhead of looping in Python.
+
+## Task 4: Floating-Point Arithmetic and Numerical Errors
+
+*   **Input values:** The values 0.1, 0.2, 0.3, the square root of 2 approximated as 1.414, and small test values (1e-4, 1e-8, 1e-12).
+*   **Mathematical operation:** Floating-point addition, absolute error, relative error, and evaluating a formula using both an unstable and a stable algebraic arrangement.
+*   **Parameter Change:** If I change the approximation of the square root of 2 to 1.4142 (instead of 1.414), the absolute error decreases because the approximation is closer to the true value.
+*   **Output Interpretation:** The script proves that `0.1 + 0.2 == 0.3` is `False` due to binary representation limits. It also shows that for very small values (like 1e-12), the "direct" formula loses precision (yielding 0.500044...), while the mathematically rearranged "stable" formula gives the correct answer of 0.500000000000.
