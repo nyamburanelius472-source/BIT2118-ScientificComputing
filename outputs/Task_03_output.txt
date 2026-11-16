@@ -1,0 +1,4 @@
+First five squared latency values: [0.03787665 0.01266192 0.04637842 0.03092504 0.00078812]
+Loop time: 0.5774 s
+Vectorized time: 0.0073 s
+Approximate speed-up: 78.8x
