@@ -27,3 +27,10 @@
 *   **Mathematical operation:** Matrix multiplication (combining rotation and scaling matrices), and calculating the determinant of the transformation matrix.
 *   **Parameter Change:** If I change the rotation angle from 45 degrees to 90 degrees, the output "Transformed points" will change to reflect a quarter-turn rotation, moving the corners to different quadrants.
 *   **Output Interpretation:** The script successfully applies a combined scaling and rotation to the square. The "Transformed points" show the new coordinates in 2D space. The determinant represents how much the area of the shape scaled (in this case, 6.0, which is the product of the x and y scaling factors).
+
+## Task 6: Solution of Systems of Linear Equations
+
+*   **Input values:** A coefficient matrix `A` representing resource usage (4 CPU, 8 RAM for Type A; 2 CPU, 12 RAM for Type B) and a vector `b` representing total usage (20 CPU, 72 RAM).
+*   **Mathematical operation:** Solving the linear system `Ax = b` using NumPy's `linalg.solve()`, and verifying with the residual.
+*   **Parameter Change:** If the total CPU usage increases to 24 (while memory stays at 72), the number of Type A servers will increase, changing the solution.
+*   **Output Interpretation:** The solver finds that there are exactly 3 Type A servers and 4 Type B servers active. The residual is [0.0, 0.0] and the residual norm is 0.0, proving the mathematical solution perfectly matches the observed total resource usage.
