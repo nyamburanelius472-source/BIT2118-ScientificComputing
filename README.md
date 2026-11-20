@@ -34,3 +34,10 @@
 *   **Mathematical operation:** Solving the linear system `Ax = b` using NumPy's `linalg.solve()`, and verifying with the residual.
 *   **Parameter Change:** If the total CPU usage increases to 24 (while memory stays at 72), the number of Type A servers will increase, changing the solution.
 *   **Output Interpretation:** The solver finds that there are exactly 3 Type A servers and 4 Type B servers active. The residual is [0.0, 0.0] and the residual norm is 0.0, proving the mathematical solution perfectly matches the observed total resource usage.
+
+## Task 7: Gaussian Elimination and LU Decomposition
+
+*   **Input values:** A 3x3 coefficient matrix `A`, and three different measurement vectors (`b`) representing different scenarios.
+*   **Mathematical operation:** LU decomposition (`lu_factor`) to factor matrix `A` into lower and upper triangular matrices, followed by `lu_solve` for each vector.
+*   **Parameter Change:** If I change the values in matrix `A`, the `lu_factor` must be recalculated because the underlying system has changed. If I only change the `b` vectors, we can reuse the existing LU factors.
+*   **Output Interpretation:** The script successfully solves three different systems of equations while only factoring the matrix `A` once. This is highly efficient for simulations where the system's structure stays the same but inputs change. The residual norms are extremely close to zero (e.g., 1.77e-15), confirming accuracy.
