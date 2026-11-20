@@ -48,3 +48,10 @@
 *   **Mathematical operation:** Jacobi and Gauss-Seidel iterative methods, tracking the infinity norm error at each step until it falls below a tolerance of 1e-8.
 *   **Parameter Change:** If I increase the tolerance (e.g., to 1e-4), the methods will stop earlier, requiring fewer iterations but yielding a less accurate result.
 *   **Output Interpretation:** Both methods converge to the exact solution. The graph (`Task_08_convergence_plot.png` in the outputs folder) shows the error dropping on a logarithmic scale. Gauss-Seidel converges much faster than Jacobi, as shown by the steeper downward slope on the orange line.
+
+## Instruction E: Modified Real-World Case (Task 2 Modification)
+
+*   **New Case:** Instead of hourly temperature, this program calculates weekly rainfall statistics.
+*   **New Assumptions & Input Data:** The data represents 7 days of rainfall in millimeters: `[12.5, 0.0, 5.2, 18.1, 2.0, 0.0, 8.4]`.
+*   **Output:** The script calculates the total weekly rainfall (46.20 mm), the daily mean (6.60 mm), the maximum daily rainfall (18.10 mm), and converts all values to inches.
+*   **Interpretation:** This demonstrates how NumPy arrays can easily handle any time-series data. The vectorized conversion to inches (dividing the whole array by 25.4) shows how quickly data can be transformed for different measurement systems.
