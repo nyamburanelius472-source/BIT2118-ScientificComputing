@@ -41,3 +41,10 @@
 *   **Mathematical operation:** LU decomposition (`lu_factor`) to factor matrix `A` into lower and upper triangular matrices, followed by `lu_solve` for each vector.
 *   **Parameter Change:** If I change the values in matrix `A`, the `lu_factor` must be recalculated because the underlying system has changed. If I only change the `b` vectors, we can reuse the existing LU factors.
 *   **Output Interpretation:** The script successfully solves three different systems of equations while only factoring the matrix `A` once. This is highly efficient for simulations where the system's structure stays the same but inputs change. The residual norms are extremely close to zero (e.g., 1.77e-15), confirming accuracy.
+
+## Task 8: Iterative Methods for Linear Systems
+
+*   **Input values:** A 5x5 tridiagonal coefficient matrix representing a steady-state heat transfer model, and a boundary condition vector `b`.
+*   **Mathematical operation:** Jacobi and Gauss-Seidel iterative methods, tracking the infinity norm error at each step until it falls below a tolerance of 1e-8.
+*   **Parameter Change:** If I increase the tolerance (e.g., to 1e-4), the methods will stop earlier, requiring fewer iterations but yielding a less accurate result.
+*   **Output Interpretation:** Both methods converge to the exact solution. The graph (`Task_08_convergence_plot.png` in the outputs folder) shows the error dropping on a logarithmic scale. Gauss-Seidel converges much faster than Jacobi, as shown by the steeper downward slope on the orange line.
